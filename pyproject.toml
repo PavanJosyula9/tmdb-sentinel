@@ -4,7 +4,9 @@ version = "0.1.0"
 description = "A service for monitoring changes to TMDB metadata"
 readme = "README.md"
 requires-python = ">=3.12, <3.15"
-dependencies = []
+dependencies = [
+    "httpx",
+]
 
 [project.optional-dependencies]
 dev = [
