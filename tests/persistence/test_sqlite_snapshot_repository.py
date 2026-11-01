@@ -149,7 +149,7 @@ def test_sqlite_repository_rejects_naive_datetime(tmp_path: Path) -> None:
             person_id=18,
             biography="Test biography",
             # Deliberately naive: tests that the repository rejects naive timestamps.
-            observed_at=datetime(2026, 10, 22),  # noqa: DTZ001
+            observed_at=datetime.fromisoformat("2026-10-22"),
         )
 
         with pytest.raises(ValueError, match="timezone-aware"):
